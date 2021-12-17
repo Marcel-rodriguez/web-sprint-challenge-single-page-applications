@@ -16,6 +16,9 @@ function Pizza() {
     const [extrasText, setExtrasText] = useState({
         extras: '',
     })
+    const [pizzaName, setPizzaName] = useState({
+        name: '',
+    })
 
     const [isChecked, setIsChecked] = useState(false)
 
@@ -27,9 +30,17 @@ function Pizza() {
         setExtrasText({...extrasText, extras: evt.target.value})
     }
 
+    const handleNameInput = (evt) => {
+        setPizzaName({...pizzaName, name: evt.target.value})
+    }
     return (
         <div>
             <h2>Build Your Own Pizza!</h2>
+            <form id='pizza-form'>
+                <div className='pizza-name'>
+                    <h3>Name your Pizza!</h3>
+                    <input type='text' onChange={handleNameInput} id='name-input' name='topping' value={pizzaName.name} placeholder='Name Your Pizza'/> 
+                </div>
             <div className='pizza-size'>
                 <h3>Choose your size</h3>
                 <input type='checkbox' id='small' name='size' value='small' /> Small
@@ -57,6 +68,7 @@ function Pizza() {
                 <h3>Submit Order!</h3>
                 <button>Submit</button>
             </div>
+            </form>
         </div>
         
     )

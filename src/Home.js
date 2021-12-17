@@ -6,7 +6,7 @@ function Home() {
     return (
         <div className="hero-Img">
           <img src="../Assets/Pizza.jpg" alt='' />
-            <Link to="/pizza">Pizza?</Link>
+            <Link to="/pizza" id='order-pizza'>Pizza?</Link>
             <div>
                 <h2>Home Page</h2>
             </div>

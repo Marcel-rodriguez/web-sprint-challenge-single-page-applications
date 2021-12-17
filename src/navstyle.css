@@ -1,0 +1,8 @@
+.navLinks {
+    text-decoration: none;
+}
+
+div .nav-Style {
+    display: flex;
+    flex-direction: column;
+}

@@ -35,34 +35,42 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
 1. In 1-2 sentences, explain what React's `useRouteMatch` hook is used for.
+
+useRouteMatch is used to match your current route that you are on and then you can add more route or information to it. Example if you are on /shop/item/ use route match would store that /shop/item and then you can add pass in the item number later /shop/item/{num}
+
 1. How would you explain form validation to someone who has never programmed before?
+   Form validation is a way to only allow a user to input data under a certain criteria. For example for an age input you would most likely want a user to input numbers and most likeley positive ones. So form validation allows you to specify what kind of information the end user puts in your form.
+
 1. In 1-2 sentences, define end to end testing.
+
+End to End testing is a way to test your application from begining to end and its a great way to see if your application is behaving as the developer is intending the users to use it.
 
 ## Instructions
 
 ### Task 1: Project Set Up
 
-- [ ] Create a forked copy of this project
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Implement the project on the main branch, committing changes regularly
-- [ ] Push commits: `git push origin main`
-- [ ] PUSH EVERYTHING TO THE MAIN BRANCH
+-   [ ] Create a forked copy of this project
+-   [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
+-   [ ] Implement the project on the main branch, committing changes regularly
+-   [ ] Push commits: `git push origin main`
+-   [ ] PUSH EVERYTHING TO THE MAIN BRANCH
 
 ### Task 2: Project Requirements
 
 Your finished project must include all of the following requirements:
 
-- [ ] A homepage that has a "/" route and links to your form (button, nav bar, or any other type of link is acceptable but must have an id of "order-pizza")
-- [ ] A order form that has a "/pizza" route and shows the form
-- [ ] A form with an id of "pizza-form"
-- [ ] A name text input field with an id of "name-input"
-- [ ] Validation for name and the error message is "name must be at least 2 characters" (Use this exact error message to make sure tests pass) ::: VERY IMPORTANT TO USE THAT EXACT ERROR MESSAGE (casing included!)
-- [ ] A dropdown for pizza size with an id of "size-dropdown"
-- [ ] A checklist for toppings - at least 4 (hint: name each separately!)
-- [ ] Text input for special instructions with an id of "special-text"
-- [ ] An Add to Order button that has an id of "order-button" and that submits form and returns a database record of name, size, toppings and special instructions
+-   [ ] A homepage that has a "/" route and links to your form (button, nav bar, or any other type of link is acceptable but must have an id of "order-pizza")
+-   [ ] A order form that has a "/pizza" route and shows the form
+-   [ ] A form with an id of "pizza-form"
+-   [ ] A name text input field with an id of "name-input"
+-   [ ] Validation for name and the error message is "name must be at least 2 characters" (Use this exact error message to make sure tests pass) ::: VERY IMPORTANT TO USE THAT EXACT ERROR MESSAGE (casing included!)
+-   [ ] A dropdown for pizza size with an id of "size-dropdown"
+-   [ ] A checklist for toppings - at least 4 (hint: name each separately!)
+-   [ ] Text input for special instructions with an id of "special-text"
+-   [ ] An Add to Order button that has an id of "order-button" and that submits form and returns a database record of name, size, toppings and special instructions
 
 Data should look something like
+
 ```
 {
     name: string,
@@ -72,6 +80,7 @@ Data should look something like
     special: string,
 }
 ```
+
 where there is a key for name, size and special and they are strings
 and
 there is a key for each of the toppings and they are booleans
@@ -81,9 +90,9 @@ there is a key for each of the toppings and they are booleans
 
 Implement the following tests in Cypress:
 
-- [ ] test that you can add text to the box
-- [ ] test that you can select multiple toppings
-- [ ] test that you can submit the form
+-   [ ] test that you can add text to the box
+-   [ ] test that you can select multiple toppings
+-   [ ] test that you can submit the form
 
 In your solution, it is essential that you follow best practices and produce clean and professional results. You will be scored on your adherence to proper code style and good organization. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
@@ -91,11 +100,11 @@ In your solution, it is essential that you follow best practices and produce cle
 
 After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module but they build on the material you just studied. Time allowing, stretch your limits and see if you can deliver on the following optional goals:
 
-- [ ] Toggle form component for gluten free crust
-- [ ] Turn form element sections into nested routes
-- [ ] Test more of the application with Cypress
-- [ ] Build UI for the eventuality of a network error when POSTing the order
-- [ ] Add functionality to your order button that it leads to a Congrats! Pizza is on it's way! page **and** returns a database record of the whole order
+-   [ ] Toggle form component for gluten free crust
+-   [ ] Turn form element sections into nested routes
+-   [ ] Test more of the application with Cypress
+-   [ ] Build UI for the eventuality of a network error when POSTing the order
+-   [ ] Add functionality to your order button that it leads to a Congrats! Pizza is on it's way! page **and** returns a database record of the whole order
 
 ## FAQs
 
@@ -113,4 +122,5 @@ One of your goals is to return a database record of the order - for this you'll 
 Follow these steps for completing your project.
 
 Set up your fork on Github to codegrade following the instructions [here](https://lambdaschool.instructure.com/courses/1675/assignments/51399?module_item_id=617624), pushing commits to your main branch.
-- [ ] Your code will be reviewed over the next few days. Read [these instructions](https://www.notion.so/How-to-View-Feedback-in-CodeGrade-c5147cee220c4044a25de28bcb6bb54a) to learn how to view feedback in CodeGrade.
+
+-   [ ] Your code will be reviewed over the next few days. Read [these instructions](https://www.notion.so/How-to-View-Feedback-in-CodeGrade-c5147cee220c4044a25de28bcb6bb54a) to learn how to view feedback in CodeGrade.

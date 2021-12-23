@@ -5,9 +5,9 @@ import '../src/App.css'
 function NavBar() {
     return (
         <div className='nav-Style'>
-            <nav>
+            <nav className='nav-bar'>
             <h1>LAMBDA EATS</h1>
-            <div className='navLinks'>
+            <div className='nav-links'>
                 <Link to='/'>Home</Link>
                 <Link to='/Pizza'>Order</Link>
             </div>

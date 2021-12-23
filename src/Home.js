@@ -4,11 +4,10 @@ import '../src/App.css'
 
 function Home() {
     return (
-        <div className="hero-Img">
-          <img src="../Assets/Pizza.jpg" alt='' />
-            <Link to="/pizza" id='order-pizza'>Pizza?</Link>
-            <div>
-                <h2>Home Page</h2>
+        <div className="hero-img-container">
+            <div className='hero-img'>
+                <h2>Ready for Pizza?</h2>
+                <Link to="/pizza" id='order-pizza'>ORDER NOW</Link>
             </div>
         </div>
     )

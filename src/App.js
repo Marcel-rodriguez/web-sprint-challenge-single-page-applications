@@ -19,13 +19,13 @@ const initialFormValues = {
   //dropDown
   size: '',
   //CheckBoxes
-  cheese: '',
-  pepperonie: '',
-  sausage: '',
-  onion: '',
-  pineapple: '',
-  greenPepper: '',
-  corn: ''
+  cheese: false,
+  pepperonie: false,
+  sausage: false,
+  onion: false,
+  pineapple: false,
+  greenPepper: false,
+  corn: false,
 }
 
 const initialFormErrors = {
@@ -47,16 +47,16 @@ const App = () => {
   const [disabled, setDisabled] = useState(initialDisabled)
 
 
-  const getPizza = () => {
-    axios.get('https://reqres.in/api/orders')
-    .then(resp => {
-      console.log(resp.data)
-      setPizza(resp.data)
-    })
-    .catch(error => {
-      console.error(error)
-    })
-  }
+  // const getPizza = () => {
+  //   axios.get('https://reqres.in/api/orders')
+  //   .then(resp => {
+  //     console.log(resp.data)
+  //     setPizza(resp.data)
+  //   })
+  //   .catch(error => {
+  //     console.error(error)
+  //   })
+  // }
 
   const postPizza = newPizza => {
     axios.post('https://reqres.in/api/orders', newPizza)
@@ -92,9 +92,9 @@ const App = () => {
     postPizza(newPizza)
   }
 
-  useEffect(() => {
-    getPizza()
-  }, [])
+  // useEffect(() => {
+  //   getPizza()
+  // }, [])
 
   useEffect(() => {
     schema.isValid(formValues).then(valid => setDisabled(!valid))

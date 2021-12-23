@@ -1,6 +1,6 @@
-import { getSuggestedQuery } from '@testing-library/dom'
-import axios from 'axios'
-import React, { useState } from 'react'
+// import { getSuggestedQuery } from '@testing-library/dom'
+// import axios from 'axios'
+import React from 'react'
 
 function PizzaForm(props) {
      const {
@@ -35,7 +35,7 @@ function PizzaForm(props) {
     }
     
     return (
-        <div>
+        <div className='form-container'>
             <h2>Build Your Own Pizza!</h2>
             <form id='pizza-form' onSubmit={handleSubmit}>
                 <div className='errors-div'>
@@ -80,7 +80,7 @@ function PizzaForm(props) {
             </div>
             <div>
                 <label>Submit Order!</label>
-                <button id='order-button'>Order Now!</button>
+                <button disabled={disabled} id='order-button'>Order Now!</button>
             </div>
             </form>
         </div>

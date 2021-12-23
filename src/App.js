@@ -3,11 +3,12 @@ import NavBar from "./NavBar";
 import { Route, Switch } from 'react-router-dom'
 import Home from "./Home";
 import PizzaForm from "./PizzaForm";
-import Pizza from "./Pizza";
+// import Pizza from "./Pizza";
 import './App.css'
 import axios from "axios";
 import schema from './validation/schema'
 import * as yup from 'yup'
+import './index.css'
 
 const initialFormValues = {
   //Text Input
@@ -49,8 +50,12 @@ const App = () => {
   const getPizza = () => {
     axios.get('https://reqres.in/api/orders')
     .then(resp => {
+      console.log(resp.data)
       setPizza(resp.data)
-    }).catch(error => console.error(error))
+    })
+    .catch(error => {
+      console.error(error)
+    })
   }
 
   const postPizza = newPizza => {
@@ -95,7 +100,6 @@ const App = () => {
     schema.isValid(formValues).then(valid => setDisabled(!valid))
   }, [formValues])
 
-  console.log(pizzas, 'Pizzas Log')
 
   return (
     <>
@@ -111,13 +115,6 @@ const App = () => {
           disabled={disabled}
           errors={formErrors}
           />
-          {
-            // pizzas.map(pizza => {
-            //   return (
-            //     <Pizza key={pizza.id} items={pizza} />
-            //   )
-            // })
-          }
 
         </Route>
         <Route path='/'>

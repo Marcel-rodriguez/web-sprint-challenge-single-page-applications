@@ -11,3 +11,39 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/*nav bar styling*/
+
+.nav-bar{
+  border: 1px solid #4f4f4f;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav-bar a{
+  text-decoration: none;
+  margin-left: 2rem;
+  padding: .2rem;
+  border-radius: .5rem;
+  color: white;
+  background: rgb(161, 141, 141);
+}
+
+/*Form styling*/
+
+.form-container{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#pizza-form{
+  border: 1px solid #4f4f4f;
+  background: rgb(214, 214, 248);
+  height: 50vh;
+}

@@ -15,13 +15,13 @@ const schema = yup.object().shape({
     .string()
     .oneOf(['small', 'medium', 'large'], 'Size Is Required'),
 
-    cheese: yup.boolean(),
-    pepperonie: yup.boolean(),
-    sausage: yup.boolean(),
-    onion: yup.boolean(),
-    pineapple: yup.boolean(),
-    greenPepper: yup.boolean(),
-    corn: yup.boolean(),
+    cheese: yup.boolean().notRequired(),
+    pepperonie: yup.boolean().notRequired(),
+    sausage: yup.boolean().notRequired(),
+    onion: yup.boolean().notRequired(),
+    pineapple: yup.boolean().notRequired(),
+    greenPepper: yup.boolean().notRequired(),
+    corn: yup.boolean().notRequired(),
 })
 
 export default schema

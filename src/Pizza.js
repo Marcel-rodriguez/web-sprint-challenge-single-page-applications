@@ -15,7 +15,7 @@ function Pizza( {items} ) {
                 <div>
                     Toppings
                     <ul>
-                        {items.toppings.map((id) => <li key={id}>name</li>)}
+                        {items.toppings.map((id) => <li key={id.name}>name</li>)}
                     </ul>
                 </div>
             }
